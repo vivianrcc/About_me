@@ -1,19 +1,76 @@
-*{
-    padding: 0;
+/* Resetando o estilo para facilitar o layout */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "Dancing Script", serif;
-    list-style: none;
-    text-decoration: none;
 }
 
-:root{
-    --bg-color: #f98bc7;
-    --text-color: #ffff;
-    --main-color:#ffff;
+/* Estilo do header */
+header {
+    background-color: #333;
+    padding: 50px;
+}
 
-    --big-font: 7rem;
-    --p-font: 1.1rem;
-    
+header .logo {
+    color: white;
+    font-size: 15px;
+    text-decoration:solid;
+    font-size:smaller;
+}
 
+ul.menu {
+    list-style: none;
+    display: flex; /* Isso coloca os itens lado a lado */
+    justify-content: space-around; /* Alinha os itens com espaço igual */
+}
+
+ul.menu li {
+    display: inline-block;
+}
+
+ul.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+ul.menu li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white; /* Destaca o item ativo */
+}
+
+/* Estilo para as seções */
+section {
+    height: 100vh; /* A seção ocupa toda a altura da tela */
+    padding: 0;
+    background-size: auto; 
+    background-position: center center;
+    width: cover;  
+}
+
+#home {
+    background-image: url(img/desenhodegato.png); 
+}
+
+#about {
+    background-image: url(); 
+}
+
+#hobbies {
+    background-image: url(); 
+}
+
+
+#foods {
+    background-image: url(); 
+}
+
+
+#pets {
+    background-image: url(); 
+}
+
+#connect {
+    background-image: url(); 
 }
