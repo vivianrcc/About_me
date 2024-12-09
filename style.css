@@ -1,76 +1,175 @@
-/* Resetando o estilo para facilitar o layout */
+/* Resetando margens e preenchimentos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo do header */
+/* Corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Header (Menu de navegação) */
 header {
-    background-color: #333;
-    padding: 50px;
+    background-color: #222;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
-header .logo {
-    color: white;
-    font-size: 15px;
-    text-decoration:solid;
-    font-size:smaller;
-}
-
-ul.menu {
+header .menu {
+    display: flex;
+    justify-content: center;
     list-style: none;
-    display: flex; /* Isso coloca os itens lado a lado */
-    justify-content: space-around; /* Alinha os itens com espaço igual */
 }
 
-ul.menu li {
-    display: inline-block;
+header .menu li {
+    margin: 0 15px;
 }
 
-ul.menu li a {
-    color: white;
+header .menu a {
     text-decoration: none;
+    color: #fff;
     font-size: 18px;
-    padding: 10px;
-}
-
-ul.menu li a.active {
     font-weight: bold;
-    border-bottom: 2px solid white; /* Destaca o item ativo */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
-/* Estilo para as seções */
-section {
-    height: 100vh; /* A seção ocupa toda a altura da tela */
-    padding: 0;
-    background-size: auto; 
-    background-position: center center;
-    width: cover;  
+header .menu a.active, header .menu a:hover {
+    color: #f39c12;
 }
 
+/* Seção Home */
 #home {
-    background-image: url(img/desenhodegato.png); 
+    background: url('img/home-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#000;
 }
 
-#about {
-    background-image: url(); 
+#home h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-#hobbies {
-    background-image: url(); 
+#home p {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
-
-#foods {
-    background-image: url(); 
+#home .btn {
+    margin-top: 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-
-#pets {
-    background-image: url(); 
+#home .btn:hover {
+    background-color: #e67e22;
 }
 
-#connect {
-    background-image: url(); 
+/* Seções gerais */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Seção Meus Pets */
+#pets .slider {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+#pets .slider .slides img {
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 40px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#pets .slider .slides img:hover {
+    transform: scale(1.05);
+}
+
+/* Conectar-se */
+#connect .social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#connect .social-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+#connect .qr-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#connect .qr-img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer .cat-img {
+    width: 50px;
+    margin-top: 10px;
+    opacity: 0.7;
 }
